@@ -1,0 +1,185 @@
+body {
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: #fff;
+}
+
+/* outer-container is here to horizontally center the elements within it. */
+
+.outer-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titlebar {
+  font-family: futura, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #A6DB6C;  
+  margin-left: 0.5em;
+
+  flex: 1 1 auto;
+}
+
+.root {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 640px;
+}
+
+
+button {
+  font-family: futura, sans-serif;
+  font-size: 24px;
+  background-color: hsla(0, 0%, 25%, 0.4);
+  border: 0px;
+  margin: 8px 8px 8px 8px;
+  color: #fff;
+  border-radius: 6px;
+  width: 300px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 8px;
+}
+
+.invalid-field {
+  border: 4px red dashed;
+}
+
+.disabled-button {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+ul.items-root {
+  padding-left: 0;
+}
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-flow: row;
+
+  padding: 8px 8px 8px 8px;
+
+  background-color: hsla(210, 60%, 95%, 0.9);
+  transition: background-color 0.5s;
+  color: hsla(120, 32%, 8%, 0.9);
+  font-family: 'Book Antiqua', georgia, serif;
+}
+
+.item .date {
+  flex: 1 1 25%;
+  order: 1;
+  font-weight: 500;
+}
+
+.item .description {
+  flex: 3 1 60%;
+  order: 2;
+  font-size: larger;
+}
+
+.item .cost {
+  flex: 1 1 15%;
+  order: 3;
+  margin-left: auto;
+
+  font-family: futura, 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  font-size: larger;
+}
+
+/* When the width is below 480, split one 'row' between date and cost, then 
+put description on the next row. */
+
+@media all and (max-width: 480px) {
+  .item {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .item > .date, .description, .cost {
+    min-height: 24px;
+  }
+
+  .item .date {
+    order: 1;
+    flex: 1 1 70%;
+    margin-top: 4px;    
+  }
+
+  .item .description {
+    flex: 1 1 100%;
+    order: 3;
+    margin-top: 10px;
+  }
+
+  .item .cost {
+    flex: 1 1 30%;
+    order: 2;
+  }
+}
+
+.item.darker-stripe {
+  background-color: hsla(210, 60%, 85%, 0.8);
+}
+
+.item.new {
+  background-color: hsla(55, 100%, 60%, 1.0);
+}
+
+.compound #cost {
+  flex: 3 0 auto;
+}
+
+.compound #currency {
+  flex: 1 0 64px;
+}
+
+
+
+.drape {
+  background-color: #222;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  opacity: 0.8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.drape h3 {
+  font-size: 32px;
+}
+
+.drape .cancel-link {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 2em;
+  background-color: hsla(228, 49%, 83%, 0.4);
+  padding: 0.25em;
+  border-radius: 0.5em;
+  padding-bottom: 0.6em;
+  cursor: pointer;
+}
+
+.drape .spinner {
+  fill: #fff;
+  font-family: futura, 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  font-size: 64px;
+  text-anchor: middle;
+}
