@@ -2,6 +2,7 @@ body {
   margin-left: 0px;
   margin-right: 0px;
   background-color: #fff;
+  font-family: pt-serif, helvetica, serif;
 }
 
 /* outer-container is here to horizontally center the elements within it. */
@@ -10,13 +11,16 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .titlebar {
-  font-family: futura, sans-serif;
+  font-family: proxima-nova-soft, sans-serif;
   font-weight: bold;
-  font-size: 30px;
-  color: #A6DB6C;  
+  font-size: 36px;
+  color: #C73256;
   margin-left: 0.5em;
 
   flex: 1 1 auto;
@@ -25,12 +29,10 @@ body {
 .root {
   flex: 1 1 auto;
   width: 100%;
-  max-width: 640px;
 }
 
-
 button {
-  font-family: futura, sans-serif;
+  font-family: proxima-nova-soft, sans-serif;
   font-size: 24px;
   background-color: hsla(0, 0%, 25%, 0.4);
   border: 0px;
@@ -53,44 +55,67 @@ ul {
   color: hsla(0, 0%, 100%, 0.5);
 }
 
-ul.items-root {
+.items-root {
   padding-left: 0;
-}
-
-.item {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  flex-flow: row;
-
-  padding: 8px 8px 8px 8px;
-
-  background-color: hsla(210, 60%, 95%, 0.9);
-  transition: background-color 0.5s;
-  color: hsla(120, 32%, 8%, 0.9);
-  font-family: 'Book Antiqua', georgia, serif;
 }
 
-.item .date {
-  flex: 1 1 25%;
-  order: 1;
-  font-weight: 500;
+.item {
+  flex: 2 0 30%;
+  min-width: 200px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  padding: 8px 8px 8px 8px;
+  border-radius: 10px;
+  margin: 4px;
+
+  background-color: hsla(180, 60%, 99%, 0.9);
+  transition: background-color 0.5s;
+  color: hsla(120, 32%, 8%, 0.9);
+
 }
 
 .item .description {
-  flex: 3 1 60%;
+  flex: 3 1 100%;
   order: 2;
-  font-size: larger;
+  font-size: xx-large;
+  font-family: proxima-nova-soft, sans-serif;  
+}
+
+.picture.image-loaded + .description {
+  font-size: x-large;
+  flex: 3 1 80%;
 }
 
 .item .cost {
-  flex: 1 1 15%;
+  flex: 1 1 20%;
   order: 3;
   margin-left: auto;
 
-  font-family: futura, 'Helvetica Neue', sans-serif;
+  font-family: proxima-nova-soft, 'Helvetica Neue', sans-serif;
   font-weight: bold;
   font-size: larger;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.picture.image-loaded + .cost {
+  flex: 3 1 100%;
+}
+
+.item .picture {
+  flex: 3 1 100%;
+  order: 1;
+
+  display: flex;
+  justify-content: center;
 }
 
 /* When the width is below 480, split one 'row' between date and cost, then 
@@ -102,30 +127,34 @@ put description on the next row. */
     flex-wrap: wrap;
   }
 
-  .item > .date, .description, .cost {
+  .item > .picture .description, .cost {
     min-height: 24px;
   }
 
-  .item .date {
-    order: 1;
-    flex: 1 1 70%;
-    margin-top: 4px;    
-  }
-
   .item .description {
-    flex: 1 1 100%;
-    order: 3;
+    flex: 1 1 70%;
     margin-top: 10px;
   }
 
   .item .cost {
     flex: 1 1 30%;
-    order: 2;
+  }
+
+  .picture.image-loaded + .cost {
+    flex: 1 1 30%;
+  }
+
+  .item .picture {
+    flex: 1 1 100%;
+  }
+
+  .picture.image-loaded + .description {
+    flex: 1 1 70%;
   }
 }
 
 .item.darker-stripe {
-  background-color: hsla(210, 60%, 85%, 0.8);
+  background-color: hsla(200, 60%, 92%, 0.8);
 }
 
 .item.new {
@@ -158,7 +187,7 @@ put description on the next row. */
   flex-direction: column;
 
   color: #fff;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: proxima-nova-soft, 'Helvetica Neue', sans-serif;
 }
 
 .drape h3 {
@@ -178,7 +207,7 @@ put description on the next row. */
 
 .drape .spinner {
   fill: #fff;
-  font-family: futura, 'Helvetica Neue', sans-serif;
+  font-family: proxima-nova-soft, 'Helvetica Neue', sans-serif;
   font-weight: bold;
   font-size: 64px;
   text-anchor: middle;
