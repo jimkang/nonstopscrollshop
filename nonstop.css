@@ -190,6 +190,10 @@ put description on the next row. */
 
 @media all and (max-width: 480px) {
   .item {
+    -webkit-box-flex: 2;
+    -webkit-flex: 2 0 100%;
+    -ms-flex: 2 0 100%;
+    flex: 2 0 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
