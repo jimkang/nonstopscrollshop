@@ -47,13 +47,11 @@ body {
 
 button {
   font-family: proxima-nova-soft, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   background-color: hsla(0, 0%, 25%, 0.4);
   border: 0px;
-  margin: 8px 8px 8px 8px;
   color: #fff;
   border-radius: 6px;
-  width: 300px;
 }
 
 ul {
@@ -103,7 +101,7 @@ ul {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding: 8px 8px 8px 8px;
+  padding: 12px 12px 12px 12px;
   border-radius: 10px;
   margin: 4px;
   background-color: hsla(180, 60%, 99%, 0.9);
@@ -123,6 +121,8 @@ ul {
   order: 2;
   font-size: xx-large;
   font-family: proxima-nova-soft, sans-serif;
+  padding-top: 10px;
+  padding-left: 4px;
 }
 
 .picture.image-loaded + .description {
@@ -135,16 +135,18 @@ ul {
 
 .item .cost {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 20%;
-  -ms-flex: 1 1 20%;
-  flex: 1 1 20%;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   -webkit-box-ordinal-group: 4;
   -webkit-order: 3;
   -ms-flex-order: 3;
   order: 3;
-  margin-left: auto;
+  /*margin-left: auto;*/
+  margin-right: 4px;
+  margin-bottom: 10px;
   font-family: proxima-nova-soft, 'Helvetica Neue', sans-serif;
-  font-size: larger;
+  font-size: x-large;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -157,6 +159,32 @@ ul {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+}
+
+.item .share {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 38%;
+  -ms-flex: 1 0 38%;
+  flex: 1 0 38%;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+  height: 36px;
+  margin-right: 8px;
+}
+
+.item .buy {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 40%;
+  -ms-flex: 1 0 40%;
+  flex: 1 0 40%;
+  -webkit-box-ordinal-group: 6;
+  -webkit-order: 5;
+  -ms-flex-order: 5;
+  order: 5;
+  height: 36px;
+  margin-left: 8px;
 }
 
 .picture.image-loaded + .cost {
@@ -274,19 +302,20 @@ put description on the next row. */
 
 
 
-
+.quantity {
+  font-style: italic;
+}
 
 
 
 .drape {
-  background-color: #222;
+  background-color: hsla(0, 0%, 0%, 0.8);
   position: fixed;
   height: 100%;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 9999;
-  opacity: 0.8;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -329,4 +358,10 @@ put description on the next row. */
   font-weight: bold;
   font-size: 64px;
   text-anchor: middle;
+}
+
+.drape .item {
+  background-color: hsla(106, 43%, 71%, 1);
+  max-width: 500px;
+  max-height: 480px;
 }
