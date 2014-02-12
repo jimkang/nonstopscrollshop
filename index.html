@@ -24,6 +24,23 @@
     <section class="root"></section>
   </div>
 
+  <svg height="0" xmlns="http://www.w3.org/2000/svg">
+    <filter id="outer-shadow">
+      <feComponentTransfer in="SourceAlpha" result="darkened">
+        <feFuncR type="linear" intercept="-1" slope="1"/>
+        <feFuncG type="linear" intercept="-1" slope="1"/>
+        <feFuncB type="linear" intercept="-1" slope="1"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feFlood flood-color="rgba(0,0,0,0.9)"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </svg>
+
         <script src="d3.v3.min.js"></script>      <script src="nsss.min.js"></script>    
 
 </body>

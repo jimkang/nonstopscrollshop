@@ -107,7 +107,7 @@ ul {
   background-color: hsla(180, 60%, 99%, 0.9);
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
-  color: hsla(120, 32%, 8%, 0.9);
+  color: hsla(120, 0%, 15%, 0.9);
 }
 
 .item .description {
@@ -142,7 +142,6 @@ ul {
   -webkit-order: 3;
   -ms-flex-order: 3;
   order: 3;
-  /*margin-left: auto;*/
   margin-right: 4px;
   margin-bottom: 10px;
   font-family: proxima-nova-soft, 'Helvetica Neue', sans-serif;
@@ -170,8 +169,12 @@ ul {
   -webkit-order: 4;
   -ms-flex-order: 4;
   order: 4;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
   height: 36px;
   margin-right: 8px;
+  background-color: hsla(204, 96%, 40%, 0.4);
 }
 
 .item .buy {
@@ -183,8 +186,12 @@ ul {
   -webkit-order: 5;
   -ms-flex-order: 5;
   order: 5;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
   height: 36px;
   margin-left: 8px;
+  background-color: hsla(204, 96%, 40%, 0.4);
 }
 
 .picture.image-loaded + .cost {
@@ -298,6 +305,7 @@ put description on the next row. */
 
 .thing {
   font-weight: bold;
+  font-size: larger;
 }
 
 
@@ -364,4 +372,9 @@ put description on the next row. */
   background-color: hsla(106, 43%, 71%, 1);
   max-width: 500px;
   max-height: 480px;
+}
+
+.shadowed {
+  -webkit-filter: url(#outer-shadow);
+  filter: url(#outer-shadow);
 }
