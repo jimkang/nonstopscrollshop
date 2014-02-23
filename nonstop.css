@@ -25,6 +25,12 @@ body {
   margin-right: 5%;
 }
 
+@-moz-document url-prefix()  {
+  .outer-container {
+    display: block;
+  }
+}
+
 a {
   color: #293B72;
   text-decoration: none;
@@ -249,6 +255,16 @@ ul {
   margin-right: 0.25em;
 }
 
+@-moz-document url-prefix()  {
+  .items-root {
+    display: block;
+  }
+
+  .item {
+    display: block;
+  }
+}
+
 /* When the width is below 586, split one 'row' between date and cost, then 
 put description on the next row. */
 
@@ -429,6 +445,14 @@ put description on the next row. */
   filter: url(#outer-shadow);
 }
 
+@-moz-document url-prefix()  {
+  .shadowed {
+    -webkit-filter: none;
+    filter: none;
+    stroke: #333;
+  }
+}
+
 .masthead {
   display: -webkit-box;
   display: -webkit-flex;
@@ -482,6 +506,22 @@ put description on the next row. */
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+@-moz-document url-prefix()  {
+  .masthead {
+    display: block;
+  }
+
+  .masthead .powered-by {
+    width: 100%;
+  }
+
+  .masthead .brought-to-you-by {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
 }
 
 @media all and (max-width: 586px) {
