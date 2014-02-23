@@ -5,6 +5,10 @@ body {
   font-family: pt-serif, helvetica, serif;
 }
 
+a {
+  color: #C73256;
+}
+
 /* outer-container is here to horizontally center the elements within it. */
 
 .outer-container {
@@ -144,20 +148,10 @@ ul {
   order: 3;
   margin-right: 4px;
   margin-bottom: 10px;
+  margin-left: 0.25em;
+  margin-top: 0.5em;
   font-family: proxima-nova-soft, 'Helvetica Neue', sans-serif;
   font-size: x-large;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
 }
 
 .item .share {
@@ -218,6 +212,36 @@ ul {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.item .out-of-stock {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+  font-size: xx-large;
+  font-family: proxima-nova-soft, sans-serif;
+  min-height: 4em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.out-of-stock span {
+  margin-right: 0.25em;
 }
 
 /* When the width is below 480, split one 'row' between date and cost, then 
@@ -369,9 +393,21 @@ put description on the next row. */
 }
 
 .drape .item {
-  background-color: hsla(106, 43%, 71%, 1);
+  background-color: #fff;
   max-width: 500px;
   max-height: 480px;
+  margin-left: 1em;
+}
+
+.drape .item .cost {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .shadowed {
