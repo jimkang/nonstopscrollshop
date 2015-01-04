@@ -179,8 +179,7 @@ ul {
   align-self: flex-end;
   height: 36px;
   margin-right: 8px;
-  /*background-color: hsla(204, 96%, 40%, 0.4);*/
-  background-color: hsla(349, 96%, 40%, 0.4);
+  background-color: hsla(204, 96%, 40%, 0.4);
 }
 
 .item .buy {
@@ -197,8 +196,7 @@ ul {
   align-self: flex-end;
   height: 36px;
   margin-left: 8px;
-  /*background-color: hsla(204, 96%, 40%, 0.4);*/
-  background-color: hsla(16, 56%, 27%, 0.4);
+  background-color: hsla(204, 96%, 40%, 0.4);
 }
 
 .picture.image-loaded + .cost {
@@ -332,13 +330,11 @@ put description on the next row. */
 }
 
 .item.darker-stripe {
-  /*background-color: hsla(200, 60%, 92%, 0.8);*/
-  background-color: hsla(27, 90%, 50%, 0.8);
+  background-color: hsla(200, 60%, 92%, 0.8);
 }
 
 .item.new {
-  /*background-color: hsla(55, 100%, 60%, 1.0);*/
-  background-color: hsla(32, 57%, 67%, 0.9);
+  background-color: hsla(55, 100%, 60%, 1.0);
 }
 
 .compound #cost {
