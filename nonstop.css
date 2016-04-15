@@ -436,17 +436,33 @@ put description on the next row. */
   .drape .item {
     max-width: 80%;
     max-height: 70%;
-    padding-left: 4px;
+    margin-left: 0;
   }
 
   .drape .item img {
     height: auto;
+    max-width: 100%;
   }
 }
 
 .shadowed {
   -webkit-filter: url(#outer-shadow);
   filter: url(#outer-shadow);
+}
+
+@media all and (max-height: 320px) {
+  .drape .item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .drape .item img {
+    width: auto;
+    height: 220px;
+  }
 }
 
 @-moz-document url-prefix()  {
