@@ -438,6 +438,10 @@ put description on the next row. */
     max-height: 70%;
     padding-left: 4px;
   }
+
+  .drape .item img {
+    height: auto;
+  }
 }
 
 .shadowed {
